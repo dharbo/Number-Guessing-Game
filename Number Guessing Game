@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+    srand(time(0));
+
+    int num1 = rand()%100+1;
+    int guess;
+
+    cout << "Let's play a game!" << endl;
+    cout << "Guess a number 1 - 100: ", cin >> guess;
+
+    while(guess != num1)
+    {
+        if(guess < num1)
+            cout << "Higher, guess again: ", cin >> guess; 
+        
+        else if(guess > num1)
+            cout << "Lower, guess again: ", cin >> guess;
+    }
+    
+    if(guess = num1)
+    {
+        cout << "You guessed it! The number was " << num1 << "." << endl;
+    }
+
+
+    return 0;
+}
